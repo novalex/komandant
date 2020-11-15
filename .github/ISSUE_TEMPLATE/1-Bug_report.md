@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: You're having technical issues. 🐞
+about: Something is not working as expected 🐞
 labels: 'bug'
 ---
 
@@ -10,24 +10,25 @@ labels: 'bug'
 
 <!-- If the following boxes are not ALL checked, your issue is likely to be closed -->
 
-- [ ] Using yarn
-- [ ] Using an up-to-date [`master` branch](https://github.com/electron-react-boilerplate/electron-react-boilerplate/tree/master)
-- [ ] Using latest version of devtools. [Check the docs for how to update](https://electron-react-boilerplate.js.org/docs/dev-tools/)
-- [ ] Tried solutions mentioned in [#400](https://github.com/electron-react-boilerplate/electron-react-boilerplate/issues/400)
-- [ ] For issue in production release, add devtools output of `DEBUG_PROD=true yarn build && yarn start`
+-   [ ] Using yarn
+-   [ ] Using an up-to-date [`main` branch](https://github.com/novalex/komandant/tree/main)
+-   [ ] Using latest version of DevTools. [Check the docs for how to update](https://electron-react-boilerplate.js.org/docs/dev-tools/)
+-   [ ] Tried solutions mentioned in [#400](https://github.com/electron-react-boilerplate/electron-react-boilerplate/issues/400)
+-   [ ] For issue in production release, add DevTools output of `DEBUG_PROD=true yarn build && yarn start`
 
 ## Expected Behavior
 
-<!--- What should have happened? -->
+<!--- What was the expected outcome? What should have happened but didn't? -->
 
 ## Current Behavior
 
-<!--- What went wrong? -->
+<!--- What is the actual outcome? What is happening that is unexpected? -->
 
 ## Steps to Reproduce
 
-<!-- Add relevant code and/or a live example -->
-<!-- Add stack traces -->
+<!-- Describe what you were doing before the unexpected behavior or bug. -->
+<!-- Add relevant code and/or a live example. -->
+<!-- Add stack traces. -->
 
 1.
 
@@ -37,31 +38,21 @@ labels: 'bug'
 
 4.
 
-## Possible Solution (Not obligatory)
+## Possible Solution or Workaround
 
-<!--- Suggest a reason for the bug or how to fix it. -->
+<!--- If you found a way to get around the issue or suspect what's causing it, add details here. -->
 
 ## Context
 
 <!--- How has this issue affected you? What are you trying to accomplish? -->
-<!--- Did you make any changes to the boilerplate after cloning it? -->
-<!--- Providing context helps us come up with a solution that is most useful in the real world -->
+<!--- Did you make any changes to the code after cloning it? -->
+<!--- Providing context helps us come up with a solution that is most useful in the real world. -->
 
-## Your Environment
+## Environment
 
-<!--- Include as many relevant details about the environment you experienced the bug in -->
+<!--- Include as many relevant details about the environment you experienced the bug in. -->
 
-- Node version :
-- electron-react-boilerplate version or branch :
-- Operating System and version :
-- Link to your project :
-
-<!---
-❗️❗️ Also, please consider donating (https://opencollective.com/electron-react-boilerplate-594) ❗️❗️
-
-Donations will ensure the following:
-
-🔨 Long term maintenance of the project
-🛣 Progress on the roadmap
-🐛 Quick responses to bug reports and help requests
- -->
+-   Node version :
+-   electron-react-boilerplate version or branch :
+-   Operating System and version :
+-   Link to your project :
