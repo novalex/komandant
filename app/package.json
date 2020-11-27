@@ -1,8 +1,8 @@
 {
-  "name": "komandant",
+  "name": "komandant-app",
   "productName": "Komandant",
   "version": "1.0.0",
-  "description": "Electron application boilerplate based on React, React Router, Webpack, React Hot Loader for rapid application development",
+  "description": "App for saving and executing CLI commands via friendly UI.",
   "main": "./main.prod.js",
   "author": {
     "name": "Alex I. Nitu",

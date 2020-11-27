@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`newCommand component should match exact snapshot 1`] = `
+<div
+  className="newCommandWrap newCommand"
+  data-tid="new-command"
+/>
+`;
