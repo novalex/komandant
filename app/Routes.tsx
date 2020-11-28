@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import App from './containers/App';
 import HomePage from './containers/HomePage';
-import { WrappedLoader } from './components/Loader/Loader';
+import { WrappedLoader } from './components/Loader';
 
 import routes from './constants/routes.json';
 
