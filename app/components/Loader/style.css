@@ -1,0 +1,22 @@
+.loader {
+	text-align: center;
+}
+
+.loaderMessage {
+	display: block;
+	margin-top: var(--spacing);
+	font-size: 0.8rem;
+}
+
+.wrappedLoader {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+}
+
+.wrappedLoader .loader {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
