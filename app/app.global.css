@@ -1,13 +1,20 @@
 :root {
 	--spacing: 16px;
+	--color: #eee;
+	--background: #222;
+	--border-color: #000;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 body {
 	position: relative;
-	color: #eee;
+	color: var(--color);
 	height: 100vh;
 	margin: 0;
-	background-color: #222;
+	background-color: var(--background);
 	font-family: Arial, Helvetica, Helvetica Neue, serif;
 	overflow-y: hidden;
 }
@@ -36,26 +43,6 @@ a {
 a:hover {
 	color: #fff;
 	cursor: pointer;
-}
-
-.backButton {
-	float: left;
-	margin-right: var(--spacing);
-}
-
-.backButton a {
-	--size: 32px;
-
-	width: var(--size);
-	height: var(--size);
-	line-height: var(--size);
-	text-align: center;
-	color: #ddd;
-	display: block;
-}
-
-.backButton a:hover {
-	color: #fff;
 }
 
 /*

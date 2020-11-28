@@ -1,0 +1,36 @@
+.header {
+	--height: 42px;
+
+	width: 100%;
+	display: flex;
+	line-height: var(--height);
+	flex-wrap: nowrap;
+	border-bottom: 1px solid var(--border-color);
+}
+
+.header h1 {
+	margin: 0;
+	text-align: center;
+	font-size: 1.2rem;
+	flex-grow: 1;
+}
+
+.backButton {
+	float: left;
+	margin-right: var(--spacing);
+}
+
+.backButton a {
+	--size: 32px;
+
+	width: var(--size);
+	height: var(--size);
+	line-height: var(--size);
+	text-align: center;
+	color: #ddd;
+	display: block;
+}
+
+.backButton a:hover {
+	color: #fff;
+}

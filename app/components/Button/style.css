@@ -1,0 +1,17 @@
+.button {
+	--minSize: 16px;
+
+	min-width: var(--minSize);
+	min-height: var(--minSize);
+}
+
+.button a {
+	display: block;
+	padding: 0 var(--minSize);
+}
+
+.button i {
+	display: inline-block;
+	width: var(--minSize);
+	height: var(--minSize);
+}
