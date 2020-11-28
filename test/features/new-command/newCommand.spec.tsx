@@ -1,4 +1,3 @@
-/* eslint react/jsx-props-no-spreading: off, @typescript-eslint/ban-ts-comment: off */
 import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';

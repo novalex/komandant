@@ -1,6 +1,7 @@
 module.exports = {
 	extends: 'erb',
 	rules: {
+		'react/jsx-props-no-spreading': ['warn', { custom: 'ignore' }],
 		// A temporary hack related to IDE not resolving correct package.json
 		'import/no-extraneous-dependencies': 'off',
 	},
