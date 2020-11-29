@@ -1,5 +1,6 @@
 import { AnyAction } from 'redux';
-import newCommandReducer from '../../app/features/new-command/newCommandSlice';
+
+import newCommandReducer from '../../app/features/new-command/slice';
 
 describe('reducers', () => {
 	describe('counter', () => {

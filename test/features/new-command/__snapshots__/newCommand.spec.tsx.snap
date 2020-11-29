@@ -2,7 +2,7 @@
 
 exports[`newCommand component should match exact snapshot 1`] = `
 <div
-  className="newCommandWrap newCommand"
+  className="newCommandWrap"
   data-tid="new-command"
 />
 `;

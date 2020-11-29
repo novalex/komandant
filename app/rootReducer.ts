@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router';
 import { History } from 'history';
+
 // eslint-disable-next-line import/no-cycle
-import newCommandReducer from './features/new-command/newCommandSlice';
+import newCommandReducer from './features/new-command/slice';
 
 export default function createRootReducer(history: History) {
 	return combineReducers({

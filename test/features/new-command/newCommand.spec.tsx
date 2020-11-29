@@ -5,8 +5,9 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
-import NewCommand from '../../../app/features/new-command/NewCommand';
-import * as newCommandSlice from '../../../app/features/new-command/newCommandSlice';
+
+import NewCommand from '../../../app/features/new-command';
+import * as newCommandSlice from '../../../app/features/new-command/slice';
 
 Enzyme.configure({ adapter: new Adapter() });
 
