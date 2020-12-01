@@ -1,8 +1,11 @@
 :root {
 	--spacing: 16px;
 	--color: #eee;
-	--background: #222;
+	--background: #1a1a1a;
 	--border-color: #000;
+	--header-border: rgba(0, 0, 0, 0.15);
+	--header-background: #111;
+	--header-height: 42px;
 }
 
 * {
@@ -16,7 +19,12 @@ body {
 	margin: 0;
 	background-color: var(--background);
 	font-family: Arial, Helvetica, Helvetica Neue, serif;
-	overflow-y: hidden;
+
+	/* overflow-y: hidden; */
+}
+
+#root {
+	height: 100vh;
 }
 
 h2 {
@@ -24,10 +32,6 @@ h2 {
 	font-size: 1.75rem;
 	letter-spacing: -0.025em;
 	color: #fff;
-}
-
-p {
-	font-size: 24px;
 }
 
 li {
@@ -38,11 +42,11 @@ a {
 	color: rgb(255, 161, 107);
 	text-decoration: none;
 	transition: color 0.3s;
-}
 
-a:hover {
-	color: #fff;
-	cursor: pointer;
+	&:hover {
+		color: #fff;
+		cursor: pointer;
+	}
 }
 
 /*

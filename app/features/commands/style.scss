@@ -1,0 +1,18 @@
+.commandsWrap,
+.commandList,
+.commandItem {
+	width: 100%;
+}
+
+.commandItem {
+	padding: var(--spacing);
+	border-bottom: 1px solid var(--border-color);
+}
+
+.commandOutput {
+	margin-top: var(--spacing);
+
+	pre {
+		overflow: auto;
+	}
+}
