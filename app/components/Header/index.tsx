@@ -2,7 +2,7 @@ import React from 'react';
 
 import Button, { ButtonProps } from '../Button';
 
-import styles from './style.css';
+import styles from './style.scss';
 
 import routes from '../../constants/routes.json';
 

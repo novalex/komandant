@@ -1,0 +1,44 @@
+.header {
+	--button-size: calc(var(--header-height) + 6px);
+
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	position: relative;
+	line-height: var(--header-height);
+	background-color: var(--header-background);
+	box-shadow: inset 0 -1px 6px var(--header-border);
+
+	h1 {
+		margin: 0;
+		text-align: center;
+		font-size: 1.2rem;
+		position: absolute;
+		top: 0;
+		left: var(--button-size);
+		right: var(--button-size);
+	}
+
+	nav {
+		margin-left: auto;
+	}
+}
+
+.backButton {
+	float: left;
+	margin-right: var(--spacing);
+
+	a {
+		width: var(--button-size);
+		height: var(--header-height);
+		line-height: var(--header-height);
+		text-align: center;
+		color: #ddd;
+		display: block;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+}
