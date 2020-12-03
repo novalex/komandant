@@ -1,7 +1,9 @@
 import React from 'react';
 
 import Header from '../components/Header';
-import Home from '../components/Home';
+import Content from '../components/Content';
+
+import Commands from '../features/commands';
 
 import routes from '../constants/routes.json';
 
@@ -22,7 +24,9 @@ export default function HomePage() {
 				]}
 			/>
 
-			<Home />
+			<Content>
+				<Commands />
+			</Content>
 		</>
 	);
 }
