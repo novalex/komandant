@@ -1,6 +1,8 @@
 import React from 'react';
 
 import Header from '../components/Header';
+import Content from '../components/Content';
+
 import NewCommand from '../features/new-command';
 
 export default function NewCommandPage() {
@@ -8,7 +10,9 @@ export default function NewCommandPage() {
 		<>
 			<Header title="New Command" />
 
-			<NewCommand />
+			<Content center>
+				<NewCommand />
+			</Content>
 		</>
 	);
 }
