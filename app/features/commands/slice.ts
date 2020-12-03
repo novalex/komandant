@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 // eslint-disable-next-line import/no-cycle
 import { RootState } from '../../store';
-import { Command, CommandData, CommandItem } from '../../types';
+import { CommandData, CommandItem } from '../../types';
 
 export const initialState = {
 	items: [] as CommandItem[],
@@ -45,14 +45,14 @@ export const getCommandItems = (state: RootState) => state.commands.items;
 
 export const getCommandData = (state: RootState) => state.commands.data;
 
-export const getCommands = (state: RootState): Command[] => {
+export const getCommands = (state: RootState) => {
 	const data = getCommandData(state);
 
 	const commands = getCommandItems(state).map((item) => {
 		return {
 			item,
 			data: data.filter((dataItem) => item.id === dataItem.id),
-		} as Command;
+		};
 	});
 
 	return commands;

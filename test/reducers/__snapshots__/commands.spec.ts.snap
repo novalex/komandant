@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducer commands should handle adding command 1`] = `
+Object {
+  "data": Array [],
+  "items": Array [
+    Object {
+      "arguments": Array [],
+      "content": "test content",
+      "id": "test-id",
+      "name": "Test name",
+    },
+  ],
+}
+`;
+
+exports[`reducer commands should handle adding data 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "id": "test-id",
+      "timestamp": 100,
+      "type": "stdout",
+    },
+  ],
+  "items": Array [],
+}
+`;
+
+exports[`reducer commands should handle initial state 1`] = `
+Object {
+  "data": Array [],
+  "items": Array [],
+}
+`;
+
+exports[`reducer commands should handle removing command 1`] = `
+Object {
+  "data": Array [],
+  "items": Array [
+    Object {
+      "arguments": Array [],
+      "content": "test content",
+      "id": "test-id",
+      "name": "Test name",
+    },
+  ],
+}
+`;
+
+exports[`reducer commands should handle removing command 2`] = `
+Object {
+  "data": Array [],
+  "items": Array [],
+}
+`;
+
+exports[`reducer commands should handle removing data 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "id": "test-id",
+      "timestamp": 100,
+      "type": "stdout",
+    },
+  ],
+  "items": Array [],
+}
+`;
+
+exports[`reducer commands should handle removing data 2`] = `
+Object {
+  "data": Array [],
+  "items": Array [],
+}
+`;
+
+exports[`reducer commands should handle unknown action type 1`] = `
+Object {
+  "data": Array [],
+  "items": Array [],
+}
+`;

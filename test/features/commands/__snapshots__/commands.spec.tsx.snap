@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component commands should match exact snapshot 1`] = `
+<div
+  className="commandsWrap"
+  data-tid="commands"
+>
+  <div
+    className="commandsEmpty"
+  >
+    <p>
+      No commands yet!
+    </p>
+    <a
+      href="/new-command"
+      onClick={[Function]}
+    >
+      Add new command
+    </a>
+  </div>
+</div>
+`;
