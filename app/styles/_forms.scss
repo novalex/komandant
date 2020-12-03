@@ -1,0 +1,25 @@
+$field-color: #aaa;
+$field-border: #000;
+$field-background: #222;
+
+textarea {
+	resize: vertical;
+}
+
+.field {
+	padding: calc(var(--spacing) / 2) var(--spacing);
+
+	input,
+	textarea {
+		width: 100%;
+		padding: calc(var(--spacing) / 2);
+		color: $field-color;
+		border: 1px solid $field-border;
+		background-color: $field-background;
+		transition: background-color 0.2s;
+
+		&:hover:not(:disabled) {
+			background-color: darken($field-background, 5);
+		}
+	}
+}
