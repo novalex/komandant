@@ -2,51 +2,31 @@ import { createSlice } from '@reduxjs/toolkit';
 
 // eslint-disable-next-line import/no-cycle
 import { RootState } from '../../store';
+import { Command, CommandData, CommandItem } from '../../types';
 
-export type CommandArgument = {
-	find: string;
-	replace: string;
-};
-
-export type CommandItem = {
-	id: string;
-	name: string;
-	content: string;
-	arguments: CommandArgument[];
-};
-
-export type CommandData = {
-	id: CommandItem['id'];
-	timestamp: number;
-	type: string;
-	data?: number | string;
-};
-
-export type Command = {
-	item: CommandItem;
-	data?: CommandData[];
+export const initialState = {
+	items: [] as CommandItem[],
+	data: [] as CommandData[],
 };
 
 const slice = createSlice({
 	name: 'commands',
-	initialState: {
-		items: [
-			{
-				id: 'lolplm',
-				name: 'Simple echo and dir',
-				content:
-					'node E:\\Apps\\Development\\Komandant\\app\\features\\commands\\testCommand.js',
-			},
-		] as CommandItem[],
-		data: [] as CommandData[],
-	},
+	initialState,
 	reducers: {
+		addCommand: (state, action) => {
+			state.items.push(action.payload as CommandItem);
+		},
+		removeCommand: (state, action) => {
+			state.items = state.items.filter(
+				(item) => item.id !== action.payload
+			);
+		},
 		commandOutput: (state, action) => {
 			state.data.push(action.payload as CommandData);
 		},
 		clearOutput: (state, action) => {
 			state.data = state.data.filter(
-				(data) => data.id !== action.payload.item.id
+				(data) => data.id !== action.payload
 			);
 		},
 	},
@@ -54,10 +34,17 @@ const slice = createSlice({
 
 export default slice.reducer;
 
-export const { commandOutput, clearOutput } = slice.actions;
+export const {
+	addCommand,
+	removeCommand,
+	commandOutput,
+	clearOutput,
+} = slice.actions;
 
 export const getCommandItems = (state: RootState) => state.commands.items;
+
 export const getCommandData = (state: RootState) => state.commands.data;
+
 export const getCommands = (state: RootState): Command[] => {
 	const data = getCommandData(state);
 

@@ -2,12 +2,12 @@ import { spawn } from 'child_process';
 
 type Props = {
 	command: string;
-	stdout?: (data: string) => unknown;
-	stderr?: (data: string) => unknown;
-	exit?: (code: number) => unknown;
+	onOutput?: (data: string) => unknown;
+	onError?: (data: string) => unknown;
+	onExit?: (code: number) => unknown;
 };
 
-const Executor = ({ command, stdout, stderr, exit }: Props): void => {
+const Executor = ({ command, onOutput, onError, onExit }: Props): void => {
 	const parts = command.split(' ');
 	const cmd = parts.shift();
 	if (!cmd) {
@@ -19,16 +19,16 @@ const Executor = ({ command, stdout, stderr, exit }: Props): void => {
 
 	proc.stdout.setEncoding(encoding);
 	proc.stdout.on('data', (data: Buffer) => {
-		return stdout && stdout(data.toString(encoding));
+		return onOutput && onOutput(data.toString(encoding));
 	});
 
 	proc.stderr.setEncoding(encoding);
 	proc.stderr.on('data', (err: Buffer) => {
-		return stderr && stderr(err.toString(encoding));
+		return onError && onError(err.toString(encoding));
 	});
 
 	proc.on('exit', (code: number) => {
-		return exit && exit(code);
+		return onExit && onExit(code);
 	});
 };
 

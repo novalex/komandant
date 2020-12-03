@@ -4,6 +4,11 @@
 	width: 100%;
 }
 
+.commandsEmpty {
+	padding: var(--spacing);
+	text-align: center;
+}
+
 .commandItem {
 	padding: var(--spacing);
 	border-bottom: 1px solid var(--border-color);

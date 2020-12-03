@@ -5,10 +5,11 @@ import { Link } from 'react-router-dom';
 import Button from '../../components/Button';
 
 import routes from '../../constants/routes.json';
+import { Command } from '../../types';
 
 import Executor from './Executor';
 
-import { getCommands, commandOutput, clearOutput, Command } from './slice';
+import { getCommands, commandOutput, clearOutput } from './slice';
 
 import styles from './style.scss';
 
@@ -24,17 +25,17 @@ export default function Commands() {
 
 		Executor({
 			command: command.item.content,
-			stdout: (data) =>
+			onOutput: (data) =>
 				dispatch(commandOutput({ ...output(), type: 'stdout', data })),
-			stderr: (data) =>
+			onError: (data) =>
 				dispatch(commandOutput({ ...output(), type: 'stderr', data })),
-			exit: (data) =>
+			onExit: (data) =>
 				dispatch(commandOutput({ ...output(), type: 'exit', data })),
 		});
 	};
 
 	const clearData = (command: Command): void => {
-		dispatch(clearOutput(command));
+		dispatch(clearOutput(command.item.id));
 	};
 
 	const commandList = commands.length ? (
@@ -87,7 +88,7 @@ export default function Commands() {
 			))}
 		</div>
 	) : (
-		<div>
+		<div className={styles.commandsEmpty}>
 			<p>No commands yet!</p>
 
 			<Link to={routes.NEW_COMMAND}>Add new command</Link>
