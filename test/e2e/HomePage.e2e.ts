@@ -26,14 +26,13 @@ test(
 );
 
 const addNewCommandText = 'Add new command';
-const newCommandSelector = Selector('[data-tid="new-command"]');
 
 const clickAddNewCommandLink = (t) =>
 	t.click(Selector('a').withExactText(addNewCommandText));
 
 test(`should navigate to New Comand page with click on the "${addNewCommandText}" link`, async (t) => {
 	await clickAddNewCommandLink(t);
-	await t.expect(newCommandSelector().innerText).eql('');
+	await t.expect(Selector('header h1').innerText).eql('New Command');
 });
 
 test('should navigate to /new-command', async (t) => {
@@ -49,6 +48,6 @@ fixture`New Command Tests`
 test('should go back to Home if back button clicked', async (t) => {
 	await t
 		.click('[data-tid="backButton"] > a')
-		.expect(Selector('[data-tid="container"]').visible)
+		.expect(Selector('[data-tid="commands"]').visible)
 		.ok();
 });
