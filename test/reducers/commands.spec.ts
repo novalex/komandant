@@ -41,6 +41,24 @@ describe('reducer commands', () => {
 		).toMatchSnapshot();
 	});
 
+	it('should handle modifying existing command', () => {
+		reducer(initialState, {
+			type: addCommand,
+			payload: testCommand,
+		});
+
+		const modifiedCommand = {
+			...testCommand,
+			name: 'Test name modified',
+		};
+		expect(
+			reducer(initialState, {
+				type: addCommand,
+				payload: modifiedCommand,
+			})
+		).toMatchSnapshot();
+	});
+
 	it('should handle removing command', () => {
 		const state = reducer(initialState, {
 			type: addCommand,

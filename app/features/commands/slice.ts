@@ -14,7 +14,14 @@ const slice = createSlice({
 	initialState,
 	reducers: {
 		addCommand: (state, action) => {
-			state.items.push(action.payload as CommandItem);
+			const itemIndex = state.items.findIndex(
+				(item) => item.id === action.payload.id
+			);
+			if (itemIndex === -1) {
+				state.items.push(action.payload);
+			} else {
+				state.items[itemIndex] = action.payload;
+			}
 		},
 		removeCommand: (state, action) => {
 			state.items = state.items.filter(

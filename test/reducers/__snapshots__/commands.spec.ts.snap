@@ -34,6 +34,20 @@ Object {
 }
 `;
 
+exports[`reducer commands should handle modifying existing command 1`] = `
+Object {
+  "data": Array [],
+  "items": Array [
+    Object {
+      "arguments": Array [],
+      "content": "test content",
+      "id": "test-id",
+      "name": "Test name modified",
+    },
+  ],
+}
+`;
+
 exports[`reducer commands should handle removing command 1`] = `
 Object {
   "data": Array [],
