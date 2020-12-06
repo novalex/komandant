@@ -13,6 +13,7 @@ const Executor = ({ command, onOutput, onError, onExit }: Props): void => {
 	if (!cmd) {
 		return;
 	}
+
 	const args = parts.join(' ');
 	const proc = spawn(cmd, [args]);
 	const encoding = 'utf8';
@@ -25,6 +26,17 @@ const Executor = ({ command, onOutput, onError, onExit }: Props): void => {
 	proc.stderr.setEncoding(encoding);
 	proc.stderr.on('data', (err: Buffer) => {
 		return onError && onError(err.toString(encoding));
+	});
+
+	proc.on('error', (err: Error) => {
+		if (!onError) {
+			return;
+		}
+		let { message } = err;
+		if (!/^error/i.test(message)) {
+			message = `Error: ${message}`;
+		}
+		onError(message);
 	});
 
 	proc.on('exit', (code: number) => {
