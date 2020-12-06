@@ -1,6 +1,8 @@
 import { AnyAction } from 'redux';
 
-import newCommandReducer from '../../app/features/new-command/slice';
+import newCommandReducer, {
+	initialState,
+} from '../../app/features/new-command/slice';
 
 describe('reducers', () => {
 	describe('counter', () => {
@@ -12,7 +14,7 @@ describe('reducers', () => {
 
 		it('should handle unknown action type', () => {
 			expect(
-				newCommandReducer({ fields: [] }, { type: 'unknown' })
+				newCommandReducer(initialState, { type: 'unknown' })
 			).toMatchSnapshot();
 		});
 	});

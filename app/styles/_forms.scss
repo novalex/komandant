@@ -4,10 +4,11 @@ $field-background: #222;
 
 textarea {
 	resize: vertical;
+	min-height: 6rem;
 }
 
 .field {
-	padding: calc(var(--spacing) / 2) var(--spacing);
+	padding: calc(var(--spacing) / 2) 0;
 
 	input,
 	textarea {
@@ -22,4 +23,11 @@ textarea {
 			background-color: darken($field-background, 5);
 		}
 	}
+}
+
+.validation-errors {
+	font-size: 0.9rem;
+	padding: 0 calc(var(--spacing) / 2);
+	border: 1px solid var(--orange);
+	margin-bottom: var(--spacing);
 }

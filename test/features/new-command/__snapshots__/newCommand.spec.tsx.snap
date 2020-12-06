@@ -4,5 +4,53 @@ exports[`newCommand component should match exact snapshot 1`] = `
 <div
   className="newCommandWrap"
   data-tid="new-command"
-/>
+>
+  <div
+    className="field"
+  >
+    <label
+      htmlFor="command-name"
+    >
+      Name
+    </label>
+    <input
+      id="command-name"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      htmlFor="command-content"
+    >
+      Command
+    </label>
+    <textarea
+      id="command-content"
+      onChange={[Function]}
+      value=""
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <div
+      className="button save-command"
+      data-tid="save-command"
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        
+        <span>
+          Save
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
 `;

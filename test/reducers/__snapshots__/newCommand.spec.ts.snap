@@ -2,12 +2,26 @@
 
 exports[`reducers counter should handle initial state 1`] = `
 Object {
-  "fields": Array [],
+  "isValid": false,
+  "item": Object {
+    "arguments": Array [],
+    "content": "",
+    "id": "",
+    "name": "",
+  },
+  "validationMessages": Array [],
 }
 `;
 
 exports[`reducers counter should handle unknown action type 1`] = `
 Object {
-  "fields": Array [],
+  "isValid": false,
+  "item": Object {
+    "arguments": Array [],
+    "content": "",
+    "id": "",
+    "name": "",
+  },
+  "validationMessages": Array [],
 }
 `;

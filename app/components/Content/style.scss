@@ -1,6 +1,7 @@
 .contentWrap {
 	display: flex;
 	width: 100%;
+	min-width: 320px;
 	min-height: calc(100vh - var(--header-height));
 
 	&.center {

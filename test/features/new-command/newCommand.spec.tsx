@@ -7,17 +7,17 @@ import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 
 import NewCommand from '../../../app/features/new-command';
-import * as newCommandSlice from '../../../app/features/new-command/slice';
+import reducer, { initialState } from '../../../app/features/new-command/slice';
 
 Enzyme.configure({ adapter: new Adapter() });
 
 function setup(
-	preloadedState: { newCommand: { fields: [] } } = {
-		newCommand: { fields: [] },
+	preloadedState: { newCommand: typeof initialState } = {
+		newCommand: initialState,
 	}
 ) {
 	const store = configureStore({
-		reducer: { newCommand: newCommandSlice.default },
+		reducer: { newCommand: reducer },
 		preloadedState,
 	});
 

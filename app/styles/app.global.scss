@@ -6,6 +6,7 @@
 	--header-border: rgba(0, 0, 0, 0.15);
 	--header-background: #111;
 	--header-height: 42px;
+	--orange: rgb(255, 161, 107);
 }
 
 * {
@@ -32,7 +33,7 @@ li {
 }
 
 a {
-	color: rgb(255, 161, 107);
+	color: var(--orange);
 	text-decoration: none;
 	transition: color 0.3s;
 
